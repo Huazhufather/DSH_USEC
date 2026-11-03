@@ -1,8 +1,8 @@
 {
   "name": "@company/dsh-erp-analysis",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "private": true,
-  "description": "公司 ERP 分析：个人账号关联、统一专家方法、共享知识与正式报告。",
+  "description": "公司 ERP 分析：选品研究、个人账号关联、统一方法、共享知识与报告。",
   "type": "module",
   "engines": {
     "dsh": ">=0.2.1-rc.3 <0.3.0"

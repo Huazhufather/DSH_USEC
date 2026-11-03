@@ -106,8 +106,8 @@ export function validateRelease(manifest) {
   const skills = manifest.files.filter((file) =>
     /^workspace\/\.dsh\/skills\/[^/]+\/SKILL\.md$/.test(file.path),
   );
-  if (skills.length !== 11)
-    throw new Error("更新包必须包含完整的11个业务 Skill。");
+  if (![11, 12].includes(skills.length))
+    throw new Error("更新包业务 Skill 不完整。");
   const paths = new Set();
   let total = 0;
   return manifest.files.map((file) => {

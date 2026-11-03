@@ -29,12 +29,13 @@ export async function companyPreset(runtime) {
   const resourceRoot = join(release.path, "workspace", ".dsh", "skills");
   const rules = await readFile(join(release.path, "workspace", "AGENTS.md"), "utf8");
   return {
-    id: PRESET, name: "公司 ERP 分析", description: "经营、SKU、备货及财务分析，自动选择公司方法。", order: 2,
+    id: PRESET, name: "公司 ERP 分析", description: "选品研究、经营、SKU、备货及财务分析。", order: 2,
     plugins: [
       { id: "persona", name: "@deepseek-ai/dsh-persona", config: { prefix: rules } },
       { id: "time-context", name: "@deepseek-ai/dsh-time-context" },
       { id: "tool-fs", name: "@deepseek-ai/dsh-tool-fs" },
       { id: "tool-fs-search", name: "@deepseek-ai/dsh-tool-fs-search", config: { sampleOverCapGlobResults: false } },
+      { id: "tool-web", name: "@deepseek-ai/dsh-tool-web" },
       { id: "tool-pwsh", name: "@deepseek-ai/dsh-tool-pwsh", disabled: process.platform !== "win32" },
       { id: "tool-bash", name: "@deepseek-ai/dsh-tool-bash", disabled: process.platform === "win32" },
       { id: "tool-jobs", name: "@deepseek-ai/dsh-tool-jobs" },
