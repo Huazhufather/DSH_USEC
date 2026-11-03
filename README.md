@@ -2,15 +2,15 @@
 
 在 DeepSeek Harness（DSH）中使用本人 ERP 账号开展经营、SKU、备货、广告和财务分析。插件提供统一的 11 套公司方法；业务数据由 ERP 按本人权限提供，模型由使用者在 DSH 中选择。
 
-当前版本：**1.1.5**。适用于 Windows DSH，最低版本 `0.2.1-rc.3`。
+当前版本：**1.1.6**。适用于 Windows DSH，最低版本 `0.2.1-rc.3`。
 
-## 从 GitHub 安装
+## 从 GitHub 安装（无需 Git）
 
 1. 在 DSH 打开“插件 → 添加插件”。
 2. 在“包名或地址”填写：
 
    ```text
-   github:Huazhufather/DSH_USEC
+   https://github.com/Huazhufather/DSH_USEC/releases/latest/download/company-dsh-erp-analysis.tgz
    ```
 
 3. 点击“安装”，安装完成后点击“立即启用”，按提示重启 DSH。
@@ -20,7 +20,7 @@
 如需固定安装本次版本，填写：
 
 ```text
-github:Huazhufather/DSH_USEC#v1.1.5
+https://github.com/Huazhufather/DSH_USEC/releases/download/v1.1.6/company-dsh-erp-analysis.tgz
 ```
 
 ERP 管理员须先为该账号开启“允许 DSH 接入”。安装插件本身不授予 ERP 数据权限。
@@ -37,7 +37,7 @@ ERP 管理员须先为该账号开启“允许 DSH 接入”。安装插件本�
 
 ## 更新插件
 
-GitHub 安装来源使用手动更新：完成当前分析，在 DSH 插件管理中卸载公司插件，再使用同一 GitHub 地址重新安装、立即启用并重启 DSH。新建公司分析对话使用新版。
+安装包直链使用手动更新：完成当前分析，在 DSH 插件管理中卸载公司插件，再使用同一安装直链重新安装、立即启用并重启 DSH。新建公司分析对话使用新版。
 
 本机登录和工作资料位于 `%LOCALAPPDATA%/CompanyDSH`，与插件安装目录分开，正常更新和重新安装会保留。
 
@@ -51,4 +51,8 @@ GitHub 安装来源使用手动更新：完成当前分析，在 DSH 插件管�
 
 本仓库提供可直接安装的插件成品：`package.json` 和插件入口位于根目录，`release.json` 内嵌固定版本的工具及方法资源，安装时无需在同事电脑构建。
 
-1.1.5 基于已验证的 1.1.4 账号功能，增加 GitHub 分发入口，并更新安装、升级提示。
+1.1.6 修复未安装 Git 的电脑无法安装的问题：主入口改为 GitHub Release 安装包直链，账号与业务方法沿用原实现。
+
+## 已安装 Git 的环境
+
+也可以填写 `github:Huazhufather/DSH_USEC` 从仓库安装。直接填写仓库地址或此快捷地址需要 Git；普通同事使用上方 `.tgz` 直链即可。

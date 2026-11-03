@@ -19,7 +19,7 @@ window.__ModuleLoader__.load({
         noReports: "暂无共享报告。", reportTitle: "报告", author: "作者", reportVersion: "版本", time: "生成时间", download: "下载",
         previousPage: "上一页", nextPage: "下一页", page: "页码",
         retryDone: "已恢复共享报告", local: "本机公司资料目录", update: "安装更新",
-        updateHelp: "完成当前分析后，在 DSH 插件管理中卸载公司插件，使用 github:Huazhufather/DSH_USEC 重新安装、立即启用并重启。新建公司分析对话使用新版；ERP 登录和本机资料保留。",
+        updateHelp: "完成当前分析后，在 DSH 插件管理中卸载公司插件，使用 https://github.com/Huazhufather/DSH_USEC/releases/latest/download/company-dsh-erp-analysis.tgz 重新安装、立即启用并重启。新建公司分析对话使用新版；ERP 登录和本机资料保留。",
         failed: "操作未完成，请重试。", mismatch: "报告文件校验失败，请重新下载。", refreshing: "正在办理…",
       },
       en: {
@@ -38,7 +38,7 @@ window.__ModuleLoader__.load({
         noReports: "No shared reports yet.", reportTitle: "Report", author: "Author", reportVersion: "Version", time: "Created", download: "Download",
         previousPage: "Previous page", nextPage: "Next page", page: "Page",
         retryDone: "Reports shared", local: "Local company workspace", update: "Install updates",
-        updateHelp: "Finish your analysis, uninstall the company plugin in DSH Plugins, then reinstall from github:Huazhufather/DSH_USEC, enable it and restart. New conversations use the updated methods; ERP sign-in and local files are retained.",
+        updateHelp: "Finish your analysis, uninstall the company plugin in DSH Plugins, then reinstall from https://github.com/Huazhufather/DSH_USEC/releases/latest/download/company-dsh-erp-analysis.tgz, enable it and restart. New conversations use the updated methods; ERP sign-in and local files are retained.",
         failed: "The operation did not finish. Retry.", mismatch: "Report verification failed. Download again.", refreshing: "Working…",
       },
     };
