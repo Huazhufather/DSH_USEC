@@ -1,0 +1,37 @@
+{
+  "name": "@company/dsh-erp-analysis",
+  "version": "1.1.5",
+  "private": true,
+  "description": "公司 ERP 分析：个人账号关联、统一专家方法、共享知识与正式报告。",
+  "type": "module",
+  "engines": {
+    "dsh": ">=0.2.1-rc.3 <0.3.0"
+  },
+  "exports": {
+    ".": "./plugin/index.mjs",
+    "./client": "./plugin/client.js",
+    "./locale/*.json": "./plugin/locale/*.json",
+    "./icon": "./plugin/icon.svg"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./plugin/cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huazhufather/DSH_USEC.git"
+  },
+  "homepage": "https://github.com/Huazhufather/DSH_USEC#readme"
+}

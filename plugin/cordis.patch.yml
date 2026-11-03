@@ -1,0 +1,3 @@
+- insert:
+    - id: company-erp-analysis
+      name: '@company/dsh-erp-analysis'

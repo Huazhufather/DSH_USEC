@@ -1,0 +1,10 @@
+node_modules/
+test-results/
+runtime/
+private/
+workspace/
+.env
+.env.*
+device.json
+device-key.pem
+*.tgz
