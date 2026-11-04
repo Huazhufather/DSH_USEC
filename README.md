@@ -2,15 +2,15 @@
 
 在 DeepSeek Harness（DSH）中使用本人 ERP 账号开展选品研究、经营、SKU、备货、广告和财务分析。插件提供统一的 12 套公司方法；业务数据由 ERP 按本人权限提供，模型由使用者在 DSH 中选择。
 
-当前版本：**1.2.0**。适用于 Windows DSH，最低版本 `0.2.1-rc.3`。
+当前版本：**1.2.2**。适用于 Windows DSH，最低版本 `0.2.1-rc.3`。
 
-## 从 GitHub 安装（无需 Git）
+## 从 npm 安装
 
 1. 在 DSH 打开“插件 → 添加插件”。
 2. 在“包名或地址”填写：
 
    ```text
-   https://github.com/Huazhufather/DSH_USEC/releases/latest/download/company-dsh-erp-analysis.tgz
+   @us_momo/dsh-erp-analysis
    ```
 
 3. 点击“安装”，安装完成后点击“立即启用”，按提示重启 DSH。
@@ -20,10 +20,12 @@
 如需固定安装本次版本，填写：
 
 ```text
-https://github.com/Huazhufather/DSH_USEC/releases/download/v1.2.0/company-dsh-erp-analysis.tgz
+@us_momo/dsh-erp-analysis@1.2.2
 ```
 
 ERP 管理员须先为该账号开启“允许 DSH 接入”。安装插件本身不授予 ERP 数据权限。
+
+安装时可以在 DSH 的 Registry 选项中选择 npm 官方源或国内镜像。镜像可能晚于官方源同步新版本；插件包下载不需要 Git 或访问 GitHub。
 
 ## 登录、切换与退出
 
@@ -37,9 +39,21 @@ ERP 管理员须先为该账号开启“允许 DSH 接入”。安装插件本�
 
 ## 更新插件
 
-安装包直链使用手动更新：完成当前分析，在 DSH 插件管理中卸载公司插件，再使用同一安装直链重新安装、立即启用并重启 DSH。新建公司分析对话使用新版。
+使用 npm 包名安装后，完成当前分析，在 **DSH Market → 已安装** 中刷新检查，发现新版时点击 **更新**，按提示重启 DSH。新建公司分析对话使用新版。该按钮由 DSH Market 提供；未使用 DSH Market 时，在 DSH 插件管理中卸载后重新安装同一 npm 包名。刚发布的版本可能需要等待镜像同步或 DSH 的新版本等待策略允许安装。
+
+**旧版首次迁移**：从 GitHub、安装包直链或本地 `.tgz` 安装的旧公司插件，先在 DSH 中卸载一次，再用 `@us_momo/dsh-erp-analysis` 安装、立即启用并按提示重启。旧包名为 `@company/dsh-erp-analysis`，不能和新包同时启用。
 
 本机登录和工作资料位于 `%LOCALAPPDATA%/CompanyDSH`，与插件安装目录分开，正常更新和重新安装会保留。
+
+## GitHub 安装包备用入口
+
+也可以使用 GitHub Release 成品安装，不需要 Git：
+
+```text
+https://github.com/Huazhufather/DSH_USEC/releases/latest/download/company-dsh-erp-analysis.tgz
+```
+
+安装包直链仍采用卸载后重新安装的手动更新方式。需要 DSH Market 一键更新时，使用上面的 npm 包名安装。
 
 ## 公司方法与报告
 
@@ -53,10 +67,12 @@ ERP 管理员须先为该账号开启“允许 DSH 接入”。安装插件本�
 
 本仓库提供可直接安装的插件成品：`package.json` 和插件入口位于根目录，`release.json` 内嵌固定版本的工具及方法资源，安装时无需在同事电脑构建。
 
+1.2.2 增加 npm 发布入口并接入 DSH Market 版本检查和更新，保留 1.2.1 的服务繁忙提示修复。
+
 1.2.0 新增选品研究与原件共享，保留固定安装地址、账号切换和本机资料。
 
 1.1.6 修复未安装 Git 的电脑无法安装的问题：主入口改为 GitHub Release 安装包直链，账号与业务方法沿用原实现。
 
 ## 已安装 Git 的环境
 
-也可以填写 `github:Huazhufather/DSH_USEC` 从仓库安装。直接填写仓库地址或此快捷地址需要 Git；普通同事使用上方 `.tgz` 直链即可。
+也可以填写 `github:Huazhufather/DSH_USEC` 从仓库安装。直接填写仓库地址或此快捷地址需要 Git；普通同事使用上方 npm 包名即可。

@@ -1,9 +1,19 @@
 {
-  "name": "@company/dsh-erp-analysis",
-  "version": "1.2.0",
-  "private": true,
+  "name": "@us_momo/dsh-erp-analysis",
+  "version": "1.2.2",
   "description": "公司 ERP 分析：选品研究、个人账号关联、统一方法、共享知识与报告。",
   "type": "module",
+  "files": [
+    "client.mjs",
+    "company-public.json",
+    "plugin/",
+    "release.json",
+    "release.mjs"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "engines": {
     "dsh": ">=0.2.1-rc.3 <0.3.0"
   },

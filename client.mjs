@@ -110,9 +110,16 @@ export class TeamClient {
     }
     if (!response.ok) {
       const code = result.error?.code || `HTTP_${response.status}`;
-      const e = new Error(`公司服务拒绝本次操作 (${code})`);
+      const requestId = typeof result.error?.requestId === "string" &&
+        /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(result.error.requestId)
+        ? result.error.requestId : undefined;
+      const message = response.status === 503 || code === "SERVICE_UNAVAILABLE"
+        ? "公司服务繁忙，请稍后重试。"
+        : `公司服务拒绝本次操作 (${code})`;
+      const e = new Error(message + (requestId ? `（请求编号：${requestId}）` : ""));
       e.code = code;
       e.status = response.status;
+      e.requestId = requestId;
       throw e;
     }
     return result;

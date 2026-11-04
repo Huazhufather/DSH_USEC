@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: "@company/dsh-erp-analysis",
+  id: "@us_momo/dsh-erp-analysis",
   factory(require) {
     const React = require("react"), h = React.createElement;
     const words = {
@@ -19,7 +19,7 @@ window.__ModuleLoader__.load({
         noReports: "暂无共享报告。", reportTitle: "报告", author: "作者", reportVersion: "版本", time: "生成时间", download: "下载",
         previousPage: "上一页", nextPage: "下一页", page: "页码",
         retryDone: "已恢复共享报告", local: "本机公司资料目录", update: "安装更新",
-        updateHelp: "完成当前分析后，在 DSH 插件管理中卸载公司插件，使用 https://github.com/Huazhufather/DSH_USEC/releases/latest/download/company-dsh-erp-analysis.tgz 重新安装、立即启用并重启。新建公司分析对话使用新版；ERP 登录和本机资料保留。",
+        updateHelp: "完成当前分析后，在 DSH Market 的已安装插件中刷新检查，发现新版时点击“更新”，按提示重启 DSH 并新建公司分析对话。旧 GitHub 或本地安装包首次迁移时，先卸载公司插件，再用 @us_momo/dsh-erp-analysis 安装并启用；ERP 登录和本机资料保留。",
         failed: "操作未完成，请重试。", mismatch: "报告文件校验失败，请重新下载。", refreshing: "正在办理…",
       },
       en: {
@@ -38,7 +38,7 @@ window.__ModuleLoader__.load({
         noReports: "No shared reports yet.", reportTitle: "Report", author: "Author", reportVersion: "Version", time: "Created", download: "Download",
         previousPage: "Previous page", nextPage: "Next page", page: "Page",
         retryDone: "Reports shared", local: "Local company workspace", update: "Install updates",
-        updateHelp: "Finish your analysis, uninstall the company plugin in DSH Plugins, then reinstall from https://github.com/Huazhufather/DSH_USEC/releases/latest/download/company-dsh-erp-analysis.tgz, enable it and restart. New conversations use the updated methods; ERP sign-in and local files are retained.",
+        updateHelp: "Finish your analysis, refresh installed plugins in DSH Market, and select Update when a newer release is available. Restart DSH as prompted and start a new company analysis conversation. To migrate a GitHub or local archive installation, uninstall the company plugin once, then install and enable @us_momo/dsh-erp-analysis. ERP sign-in and local files are retained.",
         failed: "The operation did not finish. Retry.", mismatch: "Report verification failed. Download again.", refreshing: "Working…",
       },
     };
